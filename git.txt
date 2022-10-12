@@ -1,0 +1,95 @@
+=> git setup and configaration--
+git --version
+*set
+git config --global user.name "Shahadat"
+git config --global user.email "shahadathossainshijan@gmail.com"
+git config --list
+*check
+git config user.name
+git config user.email
+
+=>git folder and add files
+directory change করতে -- cd
+পিছনের directory তে যেতে -- cd ..
+folder create করতে -- mkdir
+folder remove করতে -- rmdir
+নিজের লোকেশন জানতে --  pwd
+hidden file দেখতে -- ls -a
+git initialized করতে --  git init
+file create করতে -- touch shahadat.txt
+		-- echo > shahadat.txt
+file এ কোন কিছু add করতে --  echo এখানে লেখতে হবে >> shahadat.txt
+file open করতে --  start shahadat.txt
+file remove করতে --- rm shahadat.txt
+restore করতে -- git restore shahadat.txt
+
+=> git এর অবস্থা দেখতে 
+git status
+
+=> git staging and unstaging
+git add -A (stage all changed fill in directory and subdirectories.
+git add .   (stage all changed file in directory but not subdirectories.
+unstage করতে--  git rm --cached shahadat.txt
+পরিবর্তন দেখতে --  git diff
+
+=> git commit and uncommit
+git commit -m "message here"
+commit history দেখতে -- git log
+অল্প লাইনে commit history দেখতে -- git log --oneline
+
+=>staging and commit একসাথে করতে --
+git add . && git commit -m "message here"
+
+=> git reset থেকে  git checkout নিরাপদ
+
+=>git checkout (এটি নিরাপদ )--
+undo করতে git checkout commit_id
+redo করতে git checkout master
+
+=>git reset করতে--  (এটি নিরাপদ নয়)
+local থেকে ‍stagging area তে নিতে -- git reset --soft HEAD^
+local থেকে ‍working directory তে নিতে -- git reset HEAD^
+local থেকে একবারে শুরুতে  নিতে  এবং আগের commit এ ফিরে 
+যাবে, head commit remove হয়ে যাবে-- git reset --hard HEAD^
+
+
+
+=> git show (commit সম্পর্কে জানতে)--
+git show commit_id
+git show
+git show HEAD-Number
+
+=> .gitignore (file) --
+text.txt -- এই নামে যে ফাইল থাকবে তা  git ignore করবে
+.env -- এই নামে যে ফাইল থাকবে তা  git ignore করবে
+*.txt -- এই extension নামে যে ফাইল গুলো থাকবে তা  git ignore করবে
+!main.txt -- শুধুমাত্র main file বাদে এই extension নামে যে ফাইল গুলো থাকবে তা  git ignore করবে
+test?.txt -- test1.txt , test2.txt , test3.txt .... এই রকমের file গুলোকে git ignore করবে
+temp/ -- temp নামে কোন folder থাকলে তার ভিতরে যতগুলো file থাকবে তা git ignore করবে
+
+=> git remote :
+check remote connection -- git remote
+details url সহ  information পেতে -- git remote -v
+Remote repo add করতে -- git remote add name <REMOTE_URL>
+	Example: git remote add origin https://github.com/Md-Shahadat-Hossain/new-project.git
+
+
+=> git clone:
+clone করতে -- git clone <REMOTE_URL>
+
+=> git push (local থেকে  cloud এ push করতে  ):
+git push -u origin main
+
+=> git pull (cloude এর update গুলো local এ আনতে ):
+git pull
+
+=>git branch : 
+branch check করতে-- git branch
+branch create করতে -- git branch branch_name
+এক  branch থেকে অন্য branch এ যেতে -- git checkout branch_name
+একসাথে branch create করা ও ঐ branch এ switch করার জন্য --
+	git checkout -b "branch_name"
+কোনো branch delete করতে -- git branch -d branch_name
+
+=> local এ merge করতে -- git merge branch_name
+
